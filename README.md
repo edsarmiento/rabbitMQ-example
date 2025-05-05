@@ -5,8 +5,26 @@ A simple demonstration of RabbitMQ message queuing using Node.js and the `amqpli
 ## Prerequisites
 
 - Node.js (v12 or higher)
-- RabbitMQ server running locally
+- Docker (optional, for running RabbitMQ in a container)
 - npm (Node Package Manager)
+
+## Docker Setup
+
+If you don't have RabbitMQ installed locally, you can run it using Docker:
+
+```bash
+docker run -d --hostname my-rabbit --name rabbitmq \
+  -p 5672:5672 -p 15672:15672 \
+  rabbitmq:3-management
+```
+
+Ports:
+- 5672: RabbitMQ broker port
+- 15672: Management UI (http://localhost:15672)
+
+Default login credentials:
+- Username: guest
+- Password: guest
 
 ## Installation
 
